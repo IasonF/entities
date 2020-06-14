@@ -1,0 +1,38 @@
+= Small entities API service using Vert.X
+
+image:https://img.shields.io/badge/vert.x-3.9.1-purple.svg[link="https://vertx.io"]
+
+This application was generated using http://start.vertx.io
+
+=== Build
+
+using Maven:
+```
+./mvn clean package
+```
+
+=== Run
+
+using IDE or command-line
+```
+java -jar exercise-1.0.0-SNAPSHOT-fat.jar -conf src/main/configuration/application.json
+```
+Port defined in application.json.
+
+=== Use
+
+List all entities:
+```
+curl localhost:8080/api/entities
+```
+Send a root entity:
+```
+curl -d '{"id":"22","subEntities":null,"data":{"connectedClients":"10","status":"active"}}' localhost:8080/api/entities/
+```
+Read entity with id 2:
+```
+curl localhost:8080/api/entities/2
+```
+
+
+
