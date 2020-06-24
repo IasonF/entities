@@ -4,35 +4,51 @@ image:https://img.shields.io/badge/vert.x-3.9.1-purple.svg[link="https://vertx.i
 
 This application was generated using http://start.vertx.io
 
-=== Build
+== Build
 
 using Maven:
-```
+
+[source]
+----
 ./mvn clean package
-```
+----
 
-=== Run
+== Run
 
-using IDE or command-line
-```
-java -jar exercise-1.0.0-SNAPSHOT-fat.jar -conf src/main/configuration/application.json
-```
+The maven created fatjar is on target folder. Navigate and run:
+
+[source]
+----
+cd target
+java -jar exercise-1.0.0-SNAPSHOT-fat.jar -conf ../src/main/configuration/application.json
+----
 Port defined in application.json.
 
-=== Use
+Alternatively, using IntelliJ create a new application configuration and set
+
+- Main class: io.vertx.core.Launcher
+- Program arguments: run com.basen.exercise.EntitiesService -conf src/main/configuration/application.json
+
+== Use
 
 List all entities:
-```
+
+[source]
+----
 curl localhost:8080/api/entities
-```
+----
 Send a root entity:
-```
+
+[source]
+----
 curl -d '{"id":"22","subEntities":null,"data":{"connectedClients":"10","status":"active"}}' localhost:8080/api/entities/
-```
+----
 Read entity with id 2:
-```
+
+[source]
+----
 curl localhost:8080/api/entities/2
-```
+----
 
 
 
