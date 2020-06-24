@@ -15,12 +15,11 @@ using Maven:
 
 == Run
 
-The maven created fatjar is on target folder. Navigate and run:
+The maven created fatjar is on target folder. Command-line run:
 
 [source]
 ----
-cd target
-java -jar exercise-1.0.0-SNAPSHOT-fat.jar -conf ../src/main/configuration/application.json
+java -jar target/exercise-1.0.0-SNAPSHOT-fat.jar -conf src/main/configuration/application.json
 ----
 Port defined in application.json.
 
